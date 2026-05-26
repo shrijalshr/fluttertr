@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/setup_profile_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,9 +11,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Phase 2 Training Catalog',
+      title: 'Phase 2 Mini-Project',
       debugShowCheckedModeBanner: false,
-      // Define a custom, premium Dark Theme for the entire catalog
+      // Define a custom, premium Dark Theme for the profile application
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: const Color(0xFF6366F1), // Indigo
@@ -37,7 +37,7 @@ class MainApp extends StatelessWidget {
           bodyMedium: TextStyle(color: Color(0xFF94A3B8)),
         ),
       ),
-      home: const HomeScreen(),
+      home: const SetupProfileScreen(),
     );
   }
 }
