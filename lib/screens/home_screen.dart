@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'core_widgets.dart';
 import 'layout_widgets.dart';
+import 'interaction_screen.dart';
+import 'nav_home_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -114,6 +116,42 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const LayoutWidgetsScreen()),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+
+              // Course Card 3: Basic Interaction
+              _buildCourseCard(
+                context: context,
+                title: '08. Basic Interaction Showcase',
+                subtitle: 'Capturing user input & gestures',
+                description: 'Capture button clicks, monitor text input with controllers, update state, and respond to custom tap gestures.',
+                icon: Icons.touch_app_rounded,
+                timeLabel: '⏱ ~40 mins',
+                gradientColors: [const Color(0xFF10B981), const Color(0xFF059669)], // Emerald Gradient
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const InteractionScreen()),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+
+              // Course Card 4: Navigation
+              _buildCourseCard(
+                context: context,
+                title: '09. Navigation & Routing Showcase',
+                subtitle: 'Dynamic multi-screen structures',
+                description: 'Master pushing screens, popping back, passing parameters, and awaiting return data asynchronously.',
+                icon: Icons.alt_route_rounded,
+                timeLabel: '⏱ ~35 mins',
+                gradientColors: [const Color(0xFFF59E0B), const Color(0xFFD97706)], // Amber/Orange Gradient
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NavHomeScreen()),
                   );
                 },
               ),
