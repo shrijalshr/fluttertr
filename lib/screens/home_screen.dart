@@ -34,7 +34,10 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
-                    colors: [Color(0xFF6366F1), Color(0xFF4F46E5)], // Indigo Gradient
+                    colors: [
+                      Color(0xFF6366F1),
+                      Color(0xFF4F46E5),
+                    ], // Indigo Gradient
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -44,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                       color: const Color(0xFF6366F1).withOpacity(0.3),
                       blurRadius: 15,
                       offset: const Offset(0, 8),
-                    )
+                    ),
                   ],
                 ),
                 child: const Column(
@@ -88,14 +91,20 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 title: '06. Core Widgets Showcase',
                 subtitle: 'The fundamental atomic blocks',
-                description: 'Explore the building blocks: Text, Container, Icon, Image, and spacing with SizedBox.',
+                description:
+                    'Explore the building blocks: Text, Container, Icon, Image, and spacing with SizedBox.',
                 icon: Icons.widgets_outlined,
                 timeLabel: '⏱ ~30 mins',
-                gradientColors: [const Color(0xFF0EA5E9), const Color(0xFF0284C7)], // Cyan Gradient
+                gradientColors: [
+                  const Color(0xFF0EA5E9),
+                  const Color(0xFF0284C7),
+                ], // Cyan Gradient
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const CoreWidgetsScreen()),
+                    MaterialPageRoute(
+                      builder: (context) => const CoreWidgetsScreen(),
+                    ),
                   );
                 },
               ),
@@ -106,19 +115,25 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 title: '07. Layout Widgets Sandbox',
                 subtitle: 'Arrange and align UI components',
-                description: 'Master Row & Column flow alignment, Stack layering, Expanded flexing, and scrollable ListViews.',
+                description:
+                    'Master Row & Column flow alignment, Stack layering, Expanded flexing, and scrollable ListViews.',
                 icon: Icons.grid_view_rounded,
                 timeLabel: '⏱ ~40 mins',
-                gradientColors: [const Color(0xFFEC4899), const Color(0xFFD946EF)], // Pink/Magenta Gradient
+                gradientColors: [
+                  const Color(0xFFEC4899),
+                  const Color(0xFFD946EF),
+                ], // Pink/Magenta Gradient
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const LayoutWidgetsScreen()),
+                    MaterialPageRoute(
+                      builder: (context) => const LayoutWidgetsScreen(),
+                    ),
                   );
                 },
               ),
               const SizedBox(height: 40),
-              
+
               // Bottom Analogy reminder
               Container(
                 width: double.infinity,
@@ -130,7 +145,11 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Icon(Icons.lightbulb_rounded, color: Colors.amber.shade400, size: 28),
+                    Icon(
+                      Icons.lightbulb_rounded,
+                      color: Colors.amber.shade400,
+                      size: 28,
+                    ),
                     const SizedBox(width: 12),
                     const Expanded(
                       child: Text(
@@ -172,7 +191,7 @@ class HomeScreen extends StatelessWidget {
             color: Colors.black.withOpacity(0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
-          )
+          ),
         ],
       ),
       child: ClipRRect(
@@ -242,7 +261,10 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 4,
+                        ),
                         decoration: BoxDecoration(
                           color: const Color(0xFF0F172A),
                           borderRadius: BorderRadius.circular(8),
@@ -274,9 +296,9 @@ class HomeScreen extends StatelessWidget {
                             size: 12,
                           ),
                         ],
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
