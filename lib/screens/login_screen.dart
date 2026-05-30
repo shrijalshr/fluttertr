@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertr/screens/profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -20,11 +21,16 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _login() {
-    if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState?.validate() ?? false) {
       // If the form is valid, display a snackbar. In the real world,
       // you'd often call a server or save the information in a database.
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Processing Login...')),
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              ProfileScreen(name: "Shrijal ", email: emailController.text),
+        ),
       );
     }
   }
@@ -32,9 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-      ),
+      appBar: AppBar(title: const Text('Login')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -43,13 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               // Icon on the top
-              const Icon(
-                Icons.lock_outline,
-                size: 80,
-                color: Colors.blue,
-              ),
+              const Icon(Icons.lock_outline, size: 80, color: Colors.blue),
               const SizedBox(height: 40),
-              
+
               // Email Field
               TextFormField(
                 controller: emailController,
@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
               ),
               const SizedBox(height: 16),
-              
+
               // Password Field
               TextFormField(
                 controller: passwordController,
@@ -82,12 +82,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
               ),
               const SizedBox(height: 24),
-              
+
               // Login Button
-              ElevatedButton(
-                onPressed: _login,
-                child: const Text('Login'),
-              ),
+              ElevatedButton(onPressed: _login, child: const Text('Login')),
             ],
           ),
         ),

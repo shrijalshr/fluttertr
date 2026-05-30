@@ -5,18 +5,12 @@ class ProfileScreen extends StatelessWidget {
   final String name;
   final String email;
 
-  const ProfileScreen({
-    super.key,
-    required this.name,
-    required this.email,
-  });
+  const ProfileScreen({super.key, required this.name, required this.email});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
+      appBar: AppBar(title: const Text('Profile')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,24 +22,25 @@ class ProfileScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/avatar.png'),
             ),
             const SizedBox(height: 20),
-            
+
             // Display the passed name
             Text(
               'Name: $name',
-              style: const TextStyle(
-                fontSize: 24, 
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            
+
             // Display the passed email
             Text(
               'Email: $email',
-              style: const TextStyle(
-                fontSize: 18, 
-                color: Colors.grey,
-              ),
+              style: const TextStyle(fontSize: 18, color: Colors.grey),
+            ),
+
+            InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Text("Go back"),
             ),
           ],
         ),
