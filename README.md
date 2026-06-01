@@ -107,3 +107,7 @@ Every student who completes this curriculum will be able to:
 ---
 
 *Class Material prepared for Shrijal Shrestha · Phase 2 of 5 · Flutter Training Program*
+
+
+
+Presentation: https://gamma.app/docs/rwzojliwcgkq5xt
